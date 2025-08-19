@@ -113,7 +113,7 @@ if __name__ == "__main__":
         joined_df.write.format("bigquery")
         .option("table", output_table)
         .option("parentProject", project)
-        .option("temporaryGcsBucket", bigquery_temp_dir)
+        .option("temporaryGCSBucket", bigquery_temp_dir)
         .mode("append")
         .save()
     )
